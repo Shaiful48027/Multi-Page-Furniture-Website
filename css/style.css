@@ -3,17 +3,15 @@
     padding: 0;
     font-family: "Poppins", serif;
     box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     outline: none;
     border: none;
     text-decoration: none;
     text-transform: capitalize;
-    -webkit-transition: .2s linear;
     transition: .2s linear;
 }
 :root{
-    bg-color : #faf7f6;
-    
+    background-color : #faf7f6;
+
 }
 
 body{
@@ -23,7 +21,7 @@ html{
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    background-color: ;
+    background-color: red;
     scroll-behavior: smooth;
     scrollbar-track-color: #eae0dc;
     scrollbar-width: #b58d7e;
@@ -32,18 +30,6 @@ html{
 section{
     padding: 3rem 9%;
 }
-
-
-/* .header{
-    background: #e1cec7;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    margin: 2%;
-    border-radius: 3rem;
-} */
 
 .header h3{
     font-size: 2.5rem;
@@ -93,7 +79,7 @@ section{
 .btn:hover{
     background: linear-gradient(135deg, #945f51, #b58d7e);
 }
-/* header section start */
+
 .header{
     padding: 2rem 9%;
     position: sticky;
@@ -186,18 +172,17 @@ section{
     display: none;
 }
 #closer{
-    color: #9e7464;
+    color: #000000;
 }
 #closer:hover{
     color: #9e7464;
 }
-
 .nav{
     position: fixed;
     top: 1.8%;
     bottom: 1.5%;
-    right: 0;
-    z-index: 10000;
+    right: -101%;
+    z-index: 999;
     width: 35rem;
     /* height: 100vh; */
     background: #f0e8e4;
@@ -207,5 +192,17 @@ section{
     align-items: center;
     justify-content: center;
     flex-flow: column;
-
+}
+.nav.active{
+    right: 0;
+    box-shadow: 0 0 0 100vw rgba(0,0,0, 0.5);
+    transition: .4s linear;
+}
+.nav a{
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    color: #5e4764;
+}
+.nav a:hover{
+    color: #9e7464;
 }
